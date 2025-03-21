@@ -8,8 +8,8 @@ load_dotenv()
 
 class Config:
     # Browser settings
-    BROWSER = "chrome"
-    HEADLESS = os.getenv("HEADLESS", "False").lower() == "true"
+    BROWSER = os.getenv("BROWSER", "chrome")
+    HEADLESS = os.getenv("HEADLESS", "True").lower() == "true"
     
     # URL settings
     BASE_URL = os.getenv("BASE_URL", "http://localhost:3000")
