@@ -1,18 +1,18 @@
 {
-    "version": 2,
-    "build": {
-      "builder": "NIXPACKS",
-      "buildCommand": "pip install -r requirements.txt"
-    },
-    "deploy": {
-      "startCommand": "python run_tests.py",
-      "healthcheckPath": "/",
-      "healthcheckTimeout": 100,
-      "restartPolicyType": "NEVER"
-    },
-    "plugins": {
-      "chrome": {
-        "version": "stable"
-      }
+  "version": 2,
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "pip install -r requirements.txt"
+  },
+  "deploy": {
+    "startCommand": "python server.py",
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 100,
+    "restartPolicyType": "NEVER"
+  },
+  "plugins": {
+    "chrome": {
+      "version": "stable"
     }
   }
+}
